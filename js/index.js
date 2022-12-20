@@ -44,7 +44,7 @@ let moveNumber = 1
 let whiteFight = 12
 let blackFight = 12
 let time = false
-const gameTime = 1121
+const gameTime = 301
 let secondsWhite 
 let secondsBlack 
 let intervalWhite
