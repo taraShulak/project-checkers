@@ -661,24 +661,24 @@ function startTimerWhite() {
   secondsWhite--
   let seconds = secondsWhite
   if(seconds > 599) {
-    whiteTimerMinutes.innerHTML = `${Math.floor(seconds/60)}  :`
+    whiteTimerMinutes.innerHTML = `${Math.floor(seconds/60)}:`
     whiteTimerSeconds.innerHTML = seconds % 60 > 9 ? 
     `${seconds % 60}` :
     `0${seconds % 60}`
   }
   if(seconds > 59 && seconds < 600) {
-    whiteTimerMinutes.innerHTML = `0${Math.floor(seconds/60)}  :`
+    whiteTimerMinutes.innerHTML = `0${Math.floor(seconds/60)}:`
     whiteTimerSeconds.innerHTML = seconds % 60 > 9 ? 
     `${seconds % 60}` :
     `0${seconds % 60}`
   }
   if( seconds < 60 ){
-    whiteTimerMinutes.innerHTML = '00  :'
+    whiteTimerMinutes.innerHTML = '00:'
     whiteTimerSeconds.innerHTML = `${seconds}`
   }
   
   if(seconds < 10) {
-    whiteTimerMinutes.innerHTML = '00  :'
+    whiteTimerMinutes.innerHTML = '00:'
     whiteTimerSeconds.innerHTML = `0${seconds}`
   } 
 
@@ -707,24 +707,24 @@ function startTimerBlack() {
   secondsBlack--
   let seconds = secondsBlack
   if(seconds > 599) {
-    blackTimerMinutes.innerHTML = `${Math.floor(seconds/60)}  :`
+    blackTimerMinutes.innerHTML = `${Math.floor(seconds/60)}:`
     blackTimerSeconds.innerHTML = seconds % 60 > 9 ? 
     `${seconds % 60}` :
     `0${seconds % 60}`
   }
   if(seconds < 600 &&  seconds > 59)  {
-    blackTimerMinutes.innerHTML = `0${Math.floor(seconds/60)}  :`
+    blackTimerMinutes.innerHTML = `0${Math.floor(seconds/60)}:`
     blackTimerSeconds.innerHTML = seconds % 60 > 9 ? 
     `${seconds % 60}` :
     `0${seconds % 60}`
   }
   if( seconds < 60 ){
-    blackTimerMinutes.innerHTML = '00  :'
+    blackTimerMinutes.innerHTML = '00:'
     blackTimerSeconds.innerHTML = `${seconds}`
   }
   
   if(seconds < 10) {
-    blackTimerMinutes.innerHTML = '00  :'
+    blackTimerMinutes.innerHTML = '00:'
     blackTimerSeconds.innerHTML = `0${seconds}`
   } 
 

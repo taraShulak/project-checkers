@@ -3,14 +3,17 @@
 }
 
 .footer__wrapper {
-  width: 1080px;
+  width: fs(1080px);
   margin: 0 auto;
   padding: 10px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  font-size: 18px;
+  font-size: fs(18px);
+  @media (max-width: 1080px) {
+    width: 100vw;
+  }
 }
 .footer__contact,
 .footer__text {
