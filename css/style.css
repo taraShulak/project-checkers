@@ -179,7 +179,6 @@ body {
 
 .qween {
   border: 0.7228915663vmin solid rgb(232, 129, 81);
-  box-sizing: content-box;
 }
 
 .board {
@@ -190,6 +189,12 @@ body {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
+}
+@media (max-width: 767px) {
+  .board {
+    width: 95vmin;
+    height: 95vmin;
+  }
 }
 
 .rotate-btn,
@@ -217,7 +222,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px 10px 0;
-  z-index: 2;
 }
 @media (min-height: 830px) {
   .info {
@@ -232,11 +236,16 @@ body {
     align-items: stretch;
     width: 88vmin;
     justify-content: space-between;
-    padding: 0 0 5px 0;
+    padding: 0 0 15px 0;
   }
   .info .white {
     display: flex;
     flex-direction: column-reverse;
+  }
+}
+@media (max-width: 767px) {
+  .info {
+    width: 95vmin;
   }
 }
 
@@ -251,8 +260,8 @@ body {
   transform: rotate(180deg);
 }
 
-.rotate3D {
-  transform: rotate3d(0, 0, 1, 180deg);
+.rotate_info {
+  flex-direction: row-reverse;
 }
 
 .move {
@@ -333,6 +342,11 @@ body {
   .annotation {
     width: 80vmin;
     height: auto;
+  }
+}
+@media (max-width: 767px) {
+  .annotation {
+    width: 95vmin;
   }
 }
 

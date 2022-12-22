@@ -175,6 +175,10 @@ function createNewEl(arr) {
 
 function rotateBoard() {
   board.classList.toggle('rotate')
+  if(window.innerWidth < 1080) {
+    info.classList.toggle('rotate_info')
+    return false
+  }  
   info.classList.toggle('rotate')
   centerInfo.classList.toggle('rotate')
   //rotateBtn.classList.toggle('rotate')
