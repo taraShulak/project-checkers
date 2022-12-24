@@ -127,21 +127,21 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10px 10px 0;
+  padding: 10px;
   //transform: rotateY(180deg);
 
   @media (min-height: 830px) {
     width: fs(170px);
   }
   @media (max-width: 1080px) {
-    flex-direction: unset;
+    flex-direction: row;
     column-gap: 20px;
     align-items: stretch;
     width: 88vmin;
     justify-content: space-between;
-    padding: 0 0 15px 0;
+    padding: 10px 0;
 
-    .white {
+    .white-block {
       display: flex;
       flex-direction: column-reverse;
     }
@@ -150,7 +150,13 @@ body {
     width: 95vmin;
   }
 }
-
+/*
+.white-block,
+.black-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}*/
 .center {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -159,11 +165,19 @@ body {
 }
 .rotate {
   transform: rotate(180deg);
-}
 
-.rotate_info {
-  flex-direction: row-reverse;
+  @media (max-width: 1080px) {
+  }
 }
+.rotate_info {
+  flex-direction: column;
+  @media (max-width: 1080px) {
+    flex-direction: row-reverse;
+  }
+}
+/*.rotate-block {
+  flex-direction: column-reverse;
+}*/
 .move {
   padding: 10px;
   width: 100%;
@@ -226,7 +240,7 @@ body {
 
 .annotation {
   background-color: rgb(166, 237, 245);
-  height: 80vmin;
+  height: 88vmin;
   width: fs(140px);
   font-size: fs(22px);
   padding: 5px;
@@ -234,8 +248,10 @@ body {
   line-height: 1.2;
   overflow: hidden;
   @media (max-width: 1080px) {
-    width: 80vmin;
+    width: 88vmin;
     height: auto;
+    padding-top: 20px;
+    margin: 0;
   }
   @media (max-width: 767px) {
     width: 95vmin;

@@ -221,7 +221,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10px 10px 0;
+  padding: 10px;
 }
 @media (min-height: 830px) {
   .info {
@@ -230,15 +230,15 @@ body {
 }
 @media (max-width: 1080px) {
   .info {
-    flex-direction: unset;
+    flex-direction: row;
     -moz-column-gap: 20px;
          column-gap: 20px;
     align-items: stretch;
     width: 88vmin;
     justify-content: space-between;
-    padding: 0 0 15px 0;
+    padding: 10px 0;
   }
-  .info .white {
+  .info .white-block {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -249,6 +249,13 @@ body {
   }
 }
 
+/*
+.white-block,
+.black-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}*/
 .center {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -259,11 +266,18 @@ body {
 .rotate {
   transform: rotate(180deg);
 }
-
 .rotate_info {
-  flex-direction: row-reverse;
+  flex-direction: column;
+}
+@media (max-width: 1080px) {
+  .rotate_info {
+    flex-direction: row-reverse;
+  }
 }
 
+/*.rotate-block {
+  flex-direction: column-reverse;
+}*/
 .move {
   padding: 10px;
   width: 100%;
@@ -330,7 +344,7 @@ body {
 
 .annotation {
   background-color: rgb(166, 237, 245);
-  height: 80vmin;
+  height: 88vmin;
   width: 16.8674698795vmin;
   font-size: 2.6506024096vmin;
   padding: 5px;
@@ -340,8 +354,10 @@ body {
 }
 @media (max-width: 1080px) {
   .annotation {
-    width: 80vmin;
+    width: 88vmin;
     height: auto;
+    padding-top: 20px;
+    margin: 0;
   }
 }
 @media (max-width: 767px) {

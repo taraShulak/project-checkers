@@ -6,7 +6,9 @@ const rotateBtn = document.querySelector('.rotate-btn')
 const newGameBtn = document.querySelector('.new__game')
 const backMoveBtn = document.querySelector('.move-back')
 const whiteMove = document.querySelector('.move__white')
+const whiteBlock = document.querySelector('.white-block')
 const blackMove = document.querySelector('.move__black')
+const blackBlock = document.querySelector('.black-block')
 const whiteNumber = document.querySelector('.white__least')
 const blackNumber = document.querySelector('.black__least')
 const blackTimerSeconds = document.querySelector('.black__timer_seconds')
@@ -57,6 +59,7 @@ endGame.onclick = () => {
 createBoard()
 createNewGame()
 setTimer()
+//rotateInfo1080()
 
 function newGame() {
   let arrBoard = document.querySelectorAll(`.square`)
@@ -172,13 +175,24 @@ function createNewEl(arr) {
       moveNumber--
       arrAn.pop()
 }
-
+/*
+function rotateInfo1080() {
+  if(window.innerWidth < 1080) {
+    if(board.classList.contains('rotate')) {
+      blackBlock.classList.toggle('rotate-block')    
+    } else {
+      whiteBlock.classList.toggle('rotate-block')
+    }
+  }
+}*/
 function rotateBoard() {
   board.classList.toggle('rotate')
   if(window.innerWidth < 1080) {
     info.classList.toggle('rotate_info')
     return false
-  }  
+  } else {
+    //info.classList.toggle('rotate_info')
+  } 
   info.classList.toggle('rotate')
   centerInfo.classList.toggle('rotate')
   //rotateBtn.classList.toggle('rotate')
@@ -254,7 +268,8 @@ function createNewGame() {
   }
 }
 
-function move(event) {  
+function move(event) { 
+  //rotateInfo1080() 
   const target = event.target.closest('.square')
   const targetIndex = target.className.split(' ')[0].split('-')[1]
   //console.log('targetIndex= ' , +targetIndex - +moveStatus);
